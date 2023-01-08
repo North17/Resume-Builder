@@ -26,8 +26,8 @@ const EduModule = ({edu, allEdus, setEdus, onDelete}) => {
 
   return (
     <div>
-        <button onClick={() => onDelete(edu.id)}>X</button>
-        <div>        
+        
+        <div className='edu-box'>        
             <input 
                 type= 'text' 
                 placeholder= 'Degree'
@@ -40,8 +40,7 @@ const EduModule = ({edu, allEdus, setEdus, onDelete}) => {
                 value= {edu.inst}
                 onChange= {(e) => setEduDataInst(e.target.value)}>                
             </input> 
-
-            
+            <button onClick={() => onDelete(edu.id)}>X</button>            
         </div>
       
     </div>

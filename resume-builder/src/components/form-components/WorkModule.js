@@ -62,56 +62,61 @@ const WorkModule = ({ job, allJobs, setJobs, onDelete }) => {
 
   return (
     <div className="work-module">
-      <button onClick={() => onDelete(job.id)}>X</button>
-      <div className="form-sub-group">
-        <label>Post</label>
-        <input
-          type="text"
-          placeholder="Post"
-          value={post}
-          onChange={(e) => setPost(e.target.value)}
-        ></input>
+      <div className="job-button-aligner"><button onClick={() => onDelete(job.id)}>X</button></div>
+      <div className="job-box">
+        <div className="form-sub-group">
+          <label>Post</label>
+          <input
+            type="text"
+            placeholder="Post"
+            value={post}
+            onChange={(e) => setPost(e.target.value)}
+          ></input>
+        </div>
+
+        <div className="form-sub-group">
+          <label>Start Date</label>
+          <input
+            type="text"
+            placeholder="Start Date"
+            value={startDate}
+            onChange={(e) => setStartDate(e.target.value)}
+          ></input>
+        </div>
+
+        <div className="form-sub-group">
+          <label>End Date</label>
+          <input
+            type="text"
+            placeholder="End Date"
+            value={endDate}
+            onChange={(e) => setEndDate(e.target.value)}
+          ></input>
+        </div>
+
+        <div className="form-sub-group">
+          <label>Address</label>
+          <input
+            type="text"
+            placeholder="Address"
+            value={address}
+            onChange={(e) => setAddress(e.target.value)}
+          ></input>
+        </div>
+
+        <div className="form-sub-group">
+          <label>Details</label>
+          <textarea
+            type="text"
+            placeholder="Details"
+            value={points}
+            onChange={(e) => setPoints(e.target.value)}
+          ></textarea>
       </div>
 
-      <div className="form-sub-group">
-        <label>Start Date</label>
-        <input
-          type="text"
-          placeholder="Start Date"
-          value={startDate}
-          onChange={(e) => setStartDate(e.target.value)}
-        ></input>
-      </div>
 
-      <div className="form-sub-group">
-        <label>End Date</label>
-        <input
-          type="text"
-          placeholder="End Date"
-          value={endDate}
-          onChange={(e) => setEndDate(e.target.value)}
-        ></input>
       </div>
-
-      <div className="form-sub-group">
-        <label>Address</label>
-        <input
-          type="text"
-          placeholder="Address"
-          value={address}
-          onChange={(e) => setAddress(e.target.value)}
-        ></input>
-      </div>
-
-      <div className="form-sub-group">
-        <label>Details</label>
-        <textarea
-          type="text"
-          placeholder="Details"
-          value={points}
-          onChange={(e) => setPoints(e.target.value)}
-        ></textarea>
-      </div>
+      
     </div>
   );
 };

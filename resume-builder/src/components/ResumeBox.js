@@ -32,6 +32,7 @@ const ResumeBox = ({
   return (
 
     <div id= 'resume'>
+      <h2>Preview</h2>
       <button onClick={printDocument} type="button">Export PDF</button>
       <div className='resume-box' id= 'resume-pdf'>
 

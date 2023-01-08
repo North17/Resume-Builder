@@ -16,12 +16,14 @@ const Skills = ({skills, setSkills}) => {
 
   return (
     <div>
-        <h3>Skills</h3>
+        <h3 className='form-heading'>Skills</h3>
         <h4>Add your skills</h4>
         
+        <div className='aligner'>
         {skills.map((skill) =>
             <SkillModule key= {skill.id} skill= {skill} setSkills = {setSkills} allSkills= {skills} onDelete= {deleteSkill}/>)}
-        <button onClick={addSkill}>Add +</button>
+        </div>
+        <div  class='job-button-aligner'><button onClick={addSkill}>Add +</button></div>
     </div>
   )
 }

@@ -16,13 +16,15 @@ const Education = ({edus, setEdus}) => {
 
   return (
     <div>
-        <h3>Education</h3>
+        <h3 className='form-heading'>Education</h3>
         <h4>Add Details of Previous Education</h4>
+
+        <div className='aligner'>
         {edus.map((edu) =>
             <EduModule key= {edu.id} edu= {edu} setEdus = {setEdus} allEdus= {edus} onDelete= {deleteEdu}/>)}
       
-        
-        <button onClick={addEdu}>Add +</button>
+        </div>
+      <div  class='job-button-aligner'><button onClick={addEdu}>Add +</button></div>
     </div>
   )
 }

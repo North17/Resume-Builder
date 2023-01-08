@@ -74,17 +74,29 @@ code {
 
 /* FORM CONTENT */
 
+input, textarea {
+  background-color: #dfe6ec;
+}
+
 .form-sub-group {
   display: flex;
+  margin-bottom: 0.5em;
 }
 .form-sub-group label{
   flex: 1;
+  margin-bottom: 0.5em;
 }
 .form-sub-group input{
   flex: 3;
 }
 .form-sub-group textarea{
   flex: 3;
+}
+
+.prof-summ-box textarea{
+  width: 100%;
+  height: 12rem;
+  resize: none;
 }
 
 .form-sub-group.text-group {
@@ -96,12 +108,35 @@ code {
   resize: none;
 }
 
+.form-heading{
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
 /* WORK MODULE */
 
 .work-module {
   margin: 2em 0 2em 0;
+  display: flex;
+  flex-direction: column;
 }
 
+.job-button-aligner {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.edu-box{
+  width: 50%;
+  margin: 1em 0;
+}
+
+.aligner{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
 
 /* RESUME BOX */
 
@@ -110,6 +145,7 @@ code {
   background-image: linear-gradient(to left, var(--sec), #284661);
   width: 100%;
   padding-bottom: 5em;
+  padding: 2em;
 }
 
 .resume-box {

@@ -9,7 +9,7 @@ const PersDet = ({name, setName,
 
   return (
     <>
-        <h3>Personal Details: </h3>
+        <h3 className='form-heading'>Personal Details: </h3>
 
         <div className='form-sub-group'>
             <label>Name</label>

@@ -16,12 +16,14 @@ const Affiliations = ({affs, setAffs}) => {
 
   return (
     <div>
-        <h3>Affiliations</h3>
+        <h3 className='form-heading'>Affiliations</h3>
         <h4>Add your Affiliations</h4>
         
+        <div className='aligner'>
         {affs.map((aff) =>
             <AffModule key= {aff.id} aff= {aff} allAffs = {affs} setAffs = {setAffs} onDelete= {deleteAff}/>)}
-        <button onClick={addAff}>Add +</button>
+        </div>
+        <div  class='job-button-aligner'><button onClick={addAff}>Add +</button></div>
     </div>
   )
 }

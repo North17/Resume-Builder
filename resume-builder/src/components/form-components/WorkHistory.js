@@ -31,7 +31,7 @@ const WorkHistory = ({jobs, setJobs}) => {
           <WorkModule key= {job.id} job = {job} allJobs = {jobs} setJobs = {setJobs} onDelete = {deleteJob}/>
       ))}  
 
-      <button type='button' onClick={addJob}>Add+</button>  
+      <div className='job-button-aligner'><button type='button' onClick={addJob}>Add+</button></div>  
     </div>
   )
 }

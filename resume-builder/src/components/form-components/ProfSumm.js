@@ -4,9 +4,9 @@ const ProfSumm = ({summText, setSummText}) => {
 
   return (
     <>
-        <h3>Professional Summary: </h3> 
+        <h3 className='form-heading'>Professional Summary: </h3> 
 
-        <div className='form-sub-group text-group'>
+        <div className='prof-summ-box'>
             <textarea 
                 type= 'text' 
                 placeholder= 'Add a brief professional summary'
