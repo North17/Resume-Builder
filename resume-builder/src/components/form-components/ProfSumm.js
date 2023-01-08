@@ -1,9 +1,6 @@
 import React from 'react'
-import { useState } from 'react'
 
-const ProfSumm = () => {
-
-    const [summText, setSummText] = useState('')
+const ProfSumm = ({summText, setSummText}) => {
 
   return (
     <>

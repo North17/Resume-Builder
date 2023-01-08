@@ -1,13 +1,10 @@
 import React from 'react'
-import { useState } from 'react'
 
-const PersDet = () => {
-
-
-    const [name, setName ] = useState('')
-    const [address, setAddress ] = useState('')
-    const [contNo, setContNo ] = useState('')
-    const [email, setEmail ] = useState('')
+const PersDet = ({name, setName,
+    address, setAddress,
+    contNo, setContNo,
+    email, setEmail}    
+) => {
 
 
   return (
@@ -59,4 +56,4 @@ const PersDet = () => {
   )
 }
 
-export default PersDet
+export default PersDet; 

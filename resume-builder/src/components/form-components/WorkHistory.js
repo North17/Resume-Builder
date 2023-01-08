@@ -1,20 +1,9 @@
 import React from 'react'
-import { useState } from 'react'
 import WorkModule from './WorkModule'
 
-const WorkHistory = () => {
+const WorkHistory = ({jobs, setJobs}) => {
 
-  
 
-    const [jobs, setJobs] = useState([
-        {id: Math.floor(Math.random()*10000),
-        post: 'Hello',
-        startDate: '',
-        endDate: '',
-        address: '1',
-        points: 'test line 1\ntest line 2'},
-    ]
-    )
 
     function addJob() {
       setJobs(

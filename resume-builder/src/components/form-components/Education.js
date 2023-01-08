@@ -1,18 +1,7 @@
-import React, {useState} from 'react'
+import React from 'react'
 import EduModule from './EduModule'
 
-const Education = () => {
-
-    const [edus, setEdus] = useState(
-        [
-        {id: Math.floor(Math.random()*10000),
-        degree: 'edu1',
-        inst: 'blah1'},
-
-        {id: Math.floor(Math.random()*10000),
-        degree: 'edu2',
-        inst: 'blah2'}]
-    )
+const Education = ({edus, setEdus}) => {
 
     function addEdu() {
         setEdus([...edus, 

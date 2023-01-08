@@ -1,16 +1,8 @@
-import React, {useState} from 'react'
+import React from 'react'
 import SkillModule from './SkillModule'
 
-const Skills = () => {
+const Skills = ({skills, setSkills}) => {
 
-    const [skills, setSkills] = useState(
-        [
-        {id: Math.floor(Math.random()*10000),
-        text: 'skill1'},
-
-        {id: Math.floor(Math.random()*10000),
-        text: 'skill2'}]
-    )
 
     function addSkill() {
         setSkills([...skills, 

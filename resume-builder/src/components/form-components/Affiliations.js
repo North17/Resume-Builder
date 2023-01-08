@@ -1,16 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import AffModule from './AffModule'
 
-const Affiliations = () => {
+const Affiliations = ({affs, setAffs}) => {
 
-    const [affs, setAffs] = useState(
-        [
-            {id: Math.floor(Math.random()*10000),
-            text: 'Abc'},
-            {id: Math.floor(Math.random()*10000),
-            text: 'Xyz'}
-        ]
-    )
 
     function addAff() {
         setAffs( [...affs,
