@@ -21,7 +21,8 @@ code {
 }
 
 .App {
-  background-color: rgb(161, 161, 161);
+  background-color: #a9a9a9;
+  background-image: linear-gradient(to top, var(--sec), #284661);
 }
 
 .app-container {
@@ -31,22 +32,34 @@ code {
 }
 
 .top-box {
-  background-color: antiquewhite;
-  padding: 2em;
+  display: flex;
+  background-color: var(--sec);
+  background-image: linear-gradient(to left, var(--sec), #284661);
+  padding: 2em 1em;
+  border-bottom: 1px solid;
+  border-color: #fff;
+}
+
+.top-box-text {
+  padding: 2em 0 0 2em;
+  color: #7d9bb8;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #2a4965;
 }
 
 .form-box {
   padding: 2em;
+  background-image: linear-gradient(to right, var(--sec), #284661);
 }
 
 .main-heading {
   margin: auto;
-  text-align: center;
-  font-size: 1.75em;
+  font-size: 3rem;
+  margin-bottom: 0.5em;
 }
 
 .sub-heading {
-  font-size: 1.5em;
+  font-size: 2rem;
 } 
 
 .sample-img-cont {
@@ -56,8 +69,7 @@ code {
 }
 
 .sample-img-cont img{
-  height: 400px;
-  width: 80%;
+  height: 600px;
   background-color: antiquewhite;}
 
 /* FORM CONTENT */
@@ -95,6 +107,7 @@ code {
 
 #resume{
   background-color: #fff;
+  background-image: linear-gradient(to left, var(--sec), #284661);
   width: 100%;
   padding-bottom: 5em;
 }
@@ -107,6 +120,11 @@ code {
   background-color: antiquewhite;
   border: 2px solid;
   border-color: black;
+}
+
+p{
+  font-size: 0.85rem;
+  margin-top: 0.5em;
 }
 
 .left {
@@ -124,9 +142,10 @@ code {
 }
 
 .res-name{
-  margin-bottom: 2em;
+  margin-bottom: 1.5em;
   padding-bottom: 0.5em;
   color: var(--sec);
+  font-size: 2.5rem;
   border-bottom: 1px solid;
   border-color: var(--sec);
 }
@@ -135,7 +154,8 @@ code {
   color: var(--sec);
   border-bottom: 1px solid;
   border-color: var(--sec);
-  margin-bottom: 2em;
+  margin-bottom: 1.5em;
+  font-size: 1.4rem;
 }
 
 .heading-white {
@@ -146,6 +166,7 @@ code {
   margin-right: 1em;
   margin-bottom: 1em;
   margin-top: 2em;
+  font-size: 1.4rem;
 }
 
 .res-prof-summ p{
@@ -154,25 +175,51 @@ code {
 .res-job{
   margin-bottom: 2em;
 }
-.red-job-post{
+.res-job-post{
   font-weight: 700;
+  font-size: 1.125rem;
 }
 .res-job-info{
-  font-weight: 200;
+  font-weight: 400;
+  font-size: 1.125rem;
 }
 
 .res-add{
   padding-left: 1em;
   padding-top: 3em;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.res-add div{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.res-skills ul{  
+  font-size: 0.9rem;
 }
 
 .res-edu{
-  padding-left: 1em;
   padding-bottom: 1em;
 }
+.res-edu div {
+  padding-left: 1em;  
+  font-size: 0.9rem;
+}
+.res-edu-box {
+  margin-bottom: 0.7em;
+}
 .res-degree{
-  font-weight: 700;
+  font-weight: 700;  
+  font-size: 0.9rem;
 }
 .res-inst{
   font-weight: 200;
+  font-size: 0.9rem;
 }

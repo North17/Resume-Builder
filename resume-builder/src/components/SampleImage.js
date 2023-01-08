@@ -1,9 +1,10 @@
 import React from 'react'
+import resImg from './Resume-made.png'
 
 const SampleImage = () => {
   return (
     <div className='sample-img-cont'>
-        <img alt='sample-img'/>     
+        <img src= {resImg} alt='sample-img'/>     
     </div>
   )
 }

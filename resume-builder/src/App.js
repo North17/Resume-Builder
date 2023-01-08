@@ -51,9 +51,11 @@ function App() {
     <div className="App">
       <div className="app-container">
         <div className="top-box">
-          <Header />
-
-          <SubHeading text="Sample Resume:" />
+          <div className="top-box-text">
+            <Header />
+            <SubHeading text="Sample Resume" />
+          </div>
+          
           <SampleImage />
         </div>
 

@@ -107,7 +107,7 @@ const WorkModule = ({ job, allJobs, setJobs, onDelete }) => {
         <label>Details</label>
         <textarea
           type="text"
-          placeholder="Details (may use points)"
+          placeholder="Details"
           value={points}
           onChange={(e) => setPoints(e.target.value)}
         ></textarea>

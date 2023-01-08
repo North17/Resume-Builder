@@ -1,5 +1,9 @@
 import React from 'react'
 import JsPDF from 'jspdf'
+import html2canvas from 'html2canvas'
+import {MdLocationOn} from 'react-icons/md'
+import {BsFillTelephoneFill} from 'react-icons/bs'
+import {ImMail4} from 'react-icons/im'
 
 const ResumeBox = ({
   name, 
@@ -12,31 +16,35 @@ const ResumeBox = ({
   edus, 
   affs}) => {
 
-  const generatePDF = () => {
-
-    const resume = new JsPDF('portrait','pt','a4');
-    resume.html(document.querySelector('#resume')).then(() => {
-        resume.save('resume.pdf');
-    });
-  }
+  function  printDocument() {
+      const input = document.getElementById('resume-pdf');
+      html2canvas(input)
+        .then((canvas) => {
+          const imgData = canvas.toDataURL('image/png');
+          const pdf = new JsPDF('p', 'mm', [594, 420]);
+          pdf.addImage(imgData, 'JPEG', 0, 0);
+          pdf.save("download.pdf");
+        })
+      ;
+    }
 
 
   return (
 
-    <div id='resume'>
-      <button onClick={generatePDF} type="button">Export PDF</button>
-      <div className='resume-box'>
+    <div id= 'resume'>
+      <button onClick={printDocument} type="button">Export PDF</button>
+      <div className='resume-box' id= 'resume-pdf'>
 
         <div className='left'>
           <h1 className='res-name'>{name || "NAME"}</h1>
 
           <div className='res-prof-summ'>
-            <h2 className='heading-grey'>Professional Summary</h2>
+            <h2 className='heading-grey'>PROFESSIONAL SUMMARY</h2>
             <p>{summText}</p>
           </div>
 
           <div className='res-work-his'>
-            <h2 className='heading-grey'>Work History</h2>
+            <h2 className='heading-grey'>WORK HISTORY</h2>
             {jobs.map((job) =>
               (
               <div key={job.id} className= 'res-job'>
@@ -51,13 +59,13 @@ const ResumeBox = ({
 
         <div className='right'>
           <div className='res-add'>
-            <div>{address}</div>
-            <div>{contNo}</div>
-            <div>{email}</div>
+            <div><MdLocationOn/>{address}</div>
+            <div><BsFillTelephoneFill/>{contNo}</div>
+            <div><ImMail4/>{email}</div>
           </div>
 
           <div className='res-skills'>
-            <h2 className='heading-white'>Skills</h2>
+            <h2 className='heading-white'>SKILLS</h2>
             <ul>
               {skills.map((skill) => (
                 <li key={skill.id}>{skill.text}</li>
@@ -67,9 +75,9 @@ const ResumeBox = ({
           </div>
 
           <div className='res-edu'>
-            <h2 className='heading-white'>Education</h2>
+            <h2 className='heading-white' >EDUCATION</h2>
             {edus.map((edu) => (
-              <div key={edu.id} className= 'res-edu'>
+              <div key={edu.id} className= 'res-edu-box'>
                 <div className='res-degree'>{edu.degree}</div>
                 <div className= 'res-inst'>{edu.inst}</div>
               </div>
@@ -77,7 +85,7 @@ const ResumeBox = ({
           </div>
 
           <div className='res-aff'>
-            <h2 className='heading-white'>Affiliations</h2>
+            <h2 className='heading-white'>AFFILIATIONS</h2>
             <ul>
               {affs.map((aff) => (
                 <li key={aff.id}>{aff.text}</li>
