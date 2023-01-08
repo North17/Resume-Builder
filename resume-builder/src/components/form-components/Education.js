@@ -18,11 +18,11 @@ const Education = ({edus, setEdus}) => {
     <div>
         <h3>Education</h3>
         <h4>Add Details of Previous Education</h4>
-        <button onClick={addEdu}>Add +</button>
         {edus.map((edu) =>
             <EduModule key= {edu.id} edu= {edu} setEdus = {setEdus} allEdus= {edus} onDelete= {deleteEdu}/>)}
       
-      
+        
+        <button onClick={addEdu}>Add +</button>
     </div>
   )
 }

@@ -12,7 +12,7 @@ const WorkHistory = ({jobs, setJobs}) => {
         post: '',
         startDate: '',
         endDate: '',
-        address: '1',
+        address: '',
         points: ''
         }])
     }
@@ -27,11 +27,11 @@ const WorkHistory = ({jobs, setJobs}) => {
     <div>
       <h3>Work History</h3>
 
-      <button type='button' onClick={addJob}>Add+</button>
-
       {jobs.map((job) => (
-          <WorkModule key= {job.id} job = {job} onDelete = {deleteJob}/>
-      ))}    
+          <WorkModule key= {job.id} job = {job} allJobs = {jobs} setJobs = {setJobs} onDelete = {deleteJob}/>
+      ))}  
+
+      <button type='button' onClick={addJob}>Add+</button>  
     </div>
   )
 }

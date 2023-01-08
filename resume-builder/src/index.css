@@ -1,3 +1,11 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+:root{
+  --sec: #5b6b7a;
+}
+
 body {
   margin: 1em;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,6 +18,25 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.App {
+  background-color: rgb(161, 161, 161);
+}
+
+.app-container {
+  width: 85%;
+  margin: auto;
+  background-color: var(--sec);
+}
+
+.top-box {
+  background-color: antiquewhite;
+  padding: 2em;
+}
+
+.form-box {
+  padding: 2em;
 }
 
 .main-heading {
@@ -61,4 +88,91 @@ code {
 
 .work-module {
   margin: 2em 0 2em 0;
+}
+
+
+/* RESUME BOX */
+
+#resume{
+  background-color: #fff;
+  width: 100%;
+  padding-bottom: 5em;
+}
+
+.resume-box {
+  display: flex;
+  margin: auto;
+  height: 297mm;
+  width: 210mm;
+  background-color: antiquewhite;
+  border: 2px solid;
+  border-color: black;
+}
+
+.left {
+  background-color: #fff;
+  height: 100%;
+  flex: 3;
+  padding: 2em;
+}
+
+.right {
+  background-color: var(--sec);
+  height: 100%;
+  flex: 2;
+  color: #fff;
+}
+
+.res-name{
+  margin-bottom: 2em;
+  padding-bottom: 0.5em;
+  color: var(--sec);
+  border-bottom: 1px solid;
+  border-color: var(--sec);
+}
+
+.heading-grey {
+  color: var(--sec);
+  border-bottom: 1px solid;
+  border-color: var(--sec);
+  margin-bottom: 2em;
+}
+
+.heading-white {
+  color: #fff;
+  border-bottom: 1px solid;
+  border-color: #fff;
+  padding-left: 1em;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  margin-top: 2em;
+}
+
+.res-prof-summ p{
+  margin-bottom: 2em;
+}
+.res-job{
+  margin-bottom: 2em;
+}
+.red-job-post{
+  font-weight: 700;
+}
+.res-job-info{
+  font-weight: 200;
+}
+
+.res-add{
+  padding-left: 1em;
+  padding-top: 3em;
+}
+
+.res-edu{
+  padding-left: 1em;
+  padding-bottom: 1em;
+}
+.res-degree{
+  font-weight: 700;
+}
+.res-inst{
+  font-weight: 200;
 }

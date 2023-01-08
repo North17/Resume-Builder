@@ -18,10 +18,10 @@ const Affiliations = ({affs, setAffs}) => {
     <div>
         <h3>Affiliations</h3>
         <h4>Add your Affiliations</h4>
-        <button onClick={addAff}>Add +</button>
+        
         {affs.map((aff) =>
             <AffModule key= {aff.id} aff= {aff} allAffs = {affs} setAffs = {setAffs} onDelete= {deleteAff}/>)}
-      
+        <button onClick={addAff}>Add +</button>
     </div>
   )
 }
